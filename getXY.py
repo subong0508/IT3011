@@ -62,8 +62,7 @@ class getXY():
 with open('getXY.pickle', 'wb') as f:
     pickle.dump(getXY(), f)
 
-VOCAB_SIZE = 10000
-tokenizer = Tokenizer(oov_token = 'OOV', num_words = VOCAB_SIZE) # revised
+tokenizer = Tokenizer(oov_token = 'OOV') 
 tokenizer.fit_on_texts(train_sentences)
 
 train_sequences = tokenizer.texts_to_sequences(train_sentences)
