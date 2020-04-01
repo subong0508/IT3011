@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Emoji Generation</title>
+  </head>
+  <body>
+
+<h2>Please enter your text:</h2>
+
+{% from "_formhelpers.html" import render_field %}
+
+<form method=post action="/results">
+  <dl>
+	{{ render_field(form.text, cols='30', rows='10') }}
+  </dl>
+  <div>
+	  <input type=submit value='Submit' name='submit_btn'>
+  </div>
+</form>
+
+  </body>
+</html>
