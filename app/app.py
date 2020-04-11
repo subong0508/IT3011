@@ -17,6 +17,9 @@ with open('getXY_new.pickle', 'rb') as f:
 tokenizer = get.get_tokenizer()
 lstm_clf = load_model('LSTM_model2.h5')
 
+with open('RF.pickle', 'rb') as f:
+    rf_clf = pickle.load(f)
+
 label_emoji_mapping, emoji_label_mapping = get.get_mappings()
 
 app = Flask(__name__)
